@@ -1,5 +1,6 @@
 FROM python
-RUN pip instll django
+RUN pip install django
 COPY . . 
 RUN python manage.py migrate
+EXPOSE 8001
 CMD ["python","manage.py","runserver","0.0.0.0:8001"]
